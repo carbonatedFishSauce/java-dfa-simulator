@@ -13,8 +13,7 @@ You can get the application files using one of the following methods:
 
 * **Option A (Via Git):** Open your terminal or command prompt and run:
     ```bash
-    git clone [https://github.com/carbonatedFishSauce/vscode.git](https://github.com/carbonatedFishSauce/vscode.git)
-    cd vscode/java-dfa-simulator
+    git clone https://github.com/carbonatedFishSauce/java-dfa-simulator.git
     ```
 
 * **Option B (Direct Download):** Go to the project repository link. Click on **Code -> Download ZIP**. Once downloaded, extract the `.zip` file and open the `java-dfa-simulator` folder.
