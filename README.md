@@ -62,7 +62,16 @@ If you wish to view the source code, modify the project, or build it yourself, f
 ---
 
 ## Test Case Demo
-To quickly test the application without manual typing, you can create a `demo.txt` file anywhere on your computer with the following structure (This DFA accepts binary strings ending in "01"):
+To quickly test the application without manual typing, you can create a `demo.txt` file anywhere on your computer with the following structure :
+```text
+"characters of the alphabet seperated by spaces"
+"numbers of states"
+"the dfa table written in 1 dimension array"
+"start state"
+"end states"
+"string to be tested"
+```
+for example
 ```text
 a b c
 6
