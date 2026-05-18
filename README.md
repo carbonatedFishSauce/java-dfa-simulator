@@ -20,7 +20,8 @@ You can get the application files using one of the following methods:
 
 ---
 
-### 2. How to Launch
+### 2. How to Launch (Currently not working, main error at file run-dfa-simulator.bat, step fetching portable Maven. More so, downloading a full fetched JDK21 is simply too much)
+~~
 Run the provided executable script for your Operating System:
 
 * **Windows:** Double-click `run-dfa-simulator.bat`.
@@ -31,7 +32,7 @@ Run the provided executable script for your Operating System:
     ```
 
 > **Note:** If your system does not have Java or Maven installed, the script will prompt you to download portable versions automatically into a hidden `.tools` folder. Just type `Y` and press **Enter**.
-
+~~
 ---
 
 ### 3. How to Use the App
