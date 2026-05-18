@@ -19,7 +19,7 @@ if %ERRORLEVEL% NEQ 0 (
 
         echo [INFO] Downloading Portable JDK 21...
         if not exist "%TOOLS_DIR%" mkdir "%TOOLS_DIR%"
-        powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri '%MAVEN_URL%' -OutFile '%TOOLS_DIR%\mvn.zip'"
+        powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri '%JDK_URL%' -OutFile '%TOOLS_DIR%\jdk.zip' -UserAgent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'"
         echo [INFO] Extracting JDK...
         powershell -Command "Expand-Archive -Path '%TOOLS_DIR%\jdk.zip' -DestinationPath '%TOOLS_DIR%\jdk_temp' -Force"
         for /d %%I in ("%TOOLS_DIR%\jdk_temp\*") do move "%%I" "%TOOLS_DIR%\jdk" >nul
@@ -39,7 +39,7 @@ if %ERRORLEVEL% NEQ 0 (
 
         echo [INFO] Downloading Apache Maven...
         if not exist "%TOOLS_DIR%" mkdir "%TOOLS_DIR%"
-        powershell -Command "Invoke-WebRequest -Uri '%MAVEN_URL%' -OutFile '%TOOLS_DIR%\mvn.zip'"
+        powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri '%MAVEN_URL%' -OutFile '%TOOLS_DIR%\mvn.zip'"
         echo [INFO] Extracting Maven...
         powershell -Command "Expand-Archive -Path '%TOOLS_DIR%\mvn.zip' -DestinationPath '%TOOLS_DIR%\mvn_temp' -Force"
         for /d %%I in ("%TOOLS_DIR%\mvn_temp\*") do move "%%I" "%TOOLS_DIR%\mvn" >nul
